@@ -86,7 +86,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           .width,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/bg.png")
+              image: AssetImage("images/bg.png"),
+              fit: BoxFit.cover
           )
       ),
     );

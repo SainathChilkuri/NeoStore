@@ -88,7 +88,8 @@ MediaQueryData queryData;
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("images/bg.png")
+          image: AssetImage("images/bg.png"),
+          fit: BoxFit.cover
         )
       ),
     );
@@ -97,7 +98,6 @@ MediaQueryData queryData;
   Widget _neoSoftTitleName() {
     //print(queryData.size.height/15);
     return Container(
-
       margin: EdgeInsets.only(top: 22.0.h,left: 7.0.w,right: 5.0.w),
       child: Text(Constants.neoSoftTitle,
       style: TextStyle(
@@ -110,9 +110,9 @@ MediaQueryData queryData;
 
  Widget _usernameField() {
     return Container(
-      width: 80.0.w,
+     /* width: 80.0.w,*/
       height: 10.0.h,
-      margin: EdgeInsets.only(top: 6.0.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 6.0.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         keyboardType: TextInputType.emailAddress,
         controller: _username,
@@ -131,9 +131,9 @@ MediaQueryData queryData;
 
   Widget _passwordField() {
     return Container(
-      width: 80.0.w,
+     /* width: 80.0.w,*/
       height: 10.0.h,
-      margin: EdgeInsets.only(top: 2.0.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 2.0.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         obscureText: true,
         controller: _password,
@@ -141,8 +141,6 @@ MediaQueryData queryData;
         validator: (value){
           if(value.isEmpty){
             return "Password is required";
-          }else if(value.length < 7){
-            return "Enter min 8 character";
           }
         },
         decoration: inputDecortaion("Password","assets/icons/password_icon.png"),
@@ -159,9 +157,9 @@ MediaQueryData queryData;
       },
       child: Container(
         alignment: Alignment.center,
-        width: 80.0.w,
+        /*width: 80.0.w,*/
         height: 7.0.h,
-        margin: EdgeInsets.only(left:4.0.h,right: 3.0.h,top: 5.0.h),
+        margin: EdgeInsets.only(left:3.0.h,right: 3.0.h,top: 5.0.h),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(
             1.0.h

@@ -76,7 +76,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/bg.png")
+              image: AssetImage("images/bg.png"),
+              fit: BoxFit.cover
           )
       ),
     );

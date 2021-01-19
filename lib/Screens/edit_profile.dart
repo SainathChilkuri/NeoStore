@@ -109,7 +109,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           .width,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/bg.png")
+              image: AssetImage("images/bg.png"),
+              fit: BoxFit.cover
           )
       ),
     );
@@ -166,7 +167,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   Widget _usernameField() {
     return Container(
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.0.h,left: 7.0.w,right: 7.0.w),
+      margin: EdgeInsets.only(top: 1.0.h,left: 3.0.w,right: 3.0.w),
       child: TextFormField(
         controller: firstname,
         // ignore: missing_return
@@ -210,7 +211,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
  Widget _lastnameField() {
    return Container(
      height: 7.0.h,
-     margin: EdgeInsets.only(top: 1.5.h,left: 7.0.w,right: 7.0.w),
+     margin: EdgeInsets.only(top: 1.0.h,left: 3.0.w,right: 3.0.w),
      child: TextFormField(
        controller: lastname,
        // ignore: missing_return
@@ -227,7 +228,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
  Widget _emailField() {
    return Container(
      height: 7.0.h,
-     margin: EdgeInsets.only(top: 1.5.h,left: 7.0.w,right: 7.0.w),
+     margin: EdgeInsets.only(top: 1.0.h,left: 3.0.w,right: 3.0.w),
      child: TextFormField(
        controller:email,
        // ignore: missing_return
@@ -244,7 +245,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
  Widget _numberField() {
    return Container(
      height: 7.0.h,
-     margin: EdgeInsets.only(top: 1.5.h,left: 7.0.w,right: 7.0.w),
+     margin: EdgeInsets.only(top: 1.0.h,left: 3.0.w,right: 3.0.w),
      child: TextFormField(
        controller:phoneNo,
        // ignore: missing_return
@@ -274,7 +275,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       },
       child: Container(
         height: 7.0.h,
-        margin: EdgeInsets.only(top: 1.5.h,left: 7.0.w,right: 7.0.w),
+          margin: EdgeInsets.only(top: 1.0.h,left: 3.0.w,right: 3.0.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(2.0.w),
                 border: Border.all(color: AppColor.whiteText)
@@ -314,7 +315,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       child: Container(
         alignment: Alignment.center,
         height: 7.0.h,
-        margin: EdgeInsets.only(left:8.0.w,right: 8.0.w,top: 3.0.h),
+        margin: EdgeInsets.only(top: 2.0.h,left: 3.0.w,right: 3.0.w),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
                 1.0.h

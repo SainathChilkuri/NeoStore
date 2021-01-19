@@ -76,7 +76,8 @@ class _MyAccountState extends State<MyAccount> {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/bg.png")
+              image: AssetImage("images/bg.png"),
+              fit: BoxFit.cover
           )
       ),
     );
@@ -105,7 +106,7 @@ class _MyAccountState extends State<MyAccount> {
     return Container(
       height: 7.0.h,
       padding: EdgeInsets.only(left: 3.0.w),
-      margin: EdgeInsets.only(left: 8.0.w,right: 8.0.w),
+      margin: EdgeInsets.only(left: 4.0.w,right: 4.0.w),
       decoration: BoxDecoration(
       border: Border.all(color: AppColor.whiteText)
       ),
@@ -144,7 +145,7 @@ class _MyAccountState extends State<MyAccount> {
     return Container(
         height: 7.0.h,
         padding: EdgeInsets.only(left: 3.0.w),
-        margin: EdgeInsets.only(top:1.5.h,left: 8.0.w,right: 8.0.w),
+        margin: EdgeInsets.only(top:1.5.h,left: 4.0.w,right: 4.0.w),
         decoration: BoxDecoration(
             border: Border.all(color: AppColor.whiteText)
         ),
@@ -183,7 +184,7 @@ class _MyAccountState extends State<MyAccount> {
     return Container(
         height: 7.0.h,
         padding: EdgeInsets.only(left: 3.0.w),
-        margin: EdgeInsets.only(top:1.5.h,left: 8.0.w,right: 8.0.w),
+        margin: EdgeInsets.only(top:1.5.h,left: 4.0.w,right: 4.0.w),
         decoration: BoxDecoration(
             border: Border.all(color: AppColor.whiteText)
         ),
@@ -222,7 +223,7 @@ class _MyAccountState extends State<MyAccount> {
     return Container(
         height: 7.0.h,
         padding: EdgeInsets.only(left: 3.0.w),
-        margin: EdgeInsets.only(top:1.5.h,left: 8.0.w,right: 8.0.w),
+        margin: EdgeInsets.only(top:1.5.h,left: 4.0.w,right: 4.0.w),
         decoration: BoxDecoration(
             border: Border.all(color: AppColor.whiteText)
         ),
@@ -261,7 +262,7 @@ class _MyAccountState extends State<MyAccount> {
     return Container(
         height: 7.0.h,
         padding: EdgeInsets.only(left: 3.0.w),
-        margin: EdgeInsets.only(top:1.5.h,left: 8.0.w,right: 8.0.w),
+        margin: EdgeInsets.only(top:1.5.h,left: 4.0.w,right: 4.0.w),
         decoration: BoxDecoration(
             border: Border.all(color: AppColor.whiteText)
         ),
@@ -308,7 +309,7 @@ class _MyAccountState extends State<MyAccount> {
       child: Container(
         alignment: Alignment.center,
         height: 7.0.h,
-        margin: EdgeInsets.only(left:8.0.w,right: 8.0.w,top: 3.0.h),
+        margin: EdgeInsets.only(top:2.0.h,left: 4.0.w,right: 4.0.w),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
                 1.0.h
@@ -332,7 +333,7 @@ class _MyAccountState extends State<MyAccount> {
         Navigator.pushNamed(context, "/resetpasswordScreen",arguments: user.accessToken);
       },
       child:  Container(
-            margin: EdgeInsets.only(top: 2.0.h,left: 8.0.w,right: 8.0.w),
+            margin: EdgeInsets.only(top: 2.0.h,left: 4.0.w,right: 4.0.w),
             height: 7.0.h,
             alignment: Alignment.center,
             decoration: BoxDecoration(

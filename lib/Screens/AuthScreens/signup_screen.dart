@@ -74,6 +74,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
            children: [
              _backgroundImage(),
              Container(
+               margin: EdgeInsets.only(top: 10.0.h),
                child: Form(
                  key: _formKey,
                  child: Column(
@@ -105,7 +106,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("images/bg.png")
+              image: AssetImage("images/bg.png"),
+              fit: BoxFit.cover
           )
       ),
     );
@@ -113,7 +115,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget _neoSoftTitleName() {
     //print(queryData.size.height/15);
     return Container(
-      margin: EdgeInsets.only(top: 10.0.h,left: 10.0.w,right: 5.0.w),
+      alignment: Alignment.center,
+      margin: EdgeInsets.only(top: 1.0.h),
       child: Text(Constants.neoSoftTitle,
         style: TextStyle(
             color: AppColor.whiteText,
@@ -124,9 +127,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
   Widget _usernameField() {
     return Container(
-      width: 80.0.w,
+     /* width: 80.0.w,*/
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 4.0.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 2.0.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         controller: _firstname,
         // ignore: missing_return
@@ -169,9 +172,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget _lastnameField() {
     return Container(
-      width: 80.0.w,
+      /*width: 80.0.w,*/
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         controller: _lastname,
         // ignore: missing_return
@@ -187,9 +190,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
  Widget _emailField() {
    return Container(
-     width: 80.0.w,
+     /*width: 80.0.w,*/
      height: 7.0.h,
-     margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+     margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
      child: TextFormField(
        keyboardType: TextInputType.emailAddress,
        controller: _email,
@@ -209,9 +212,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget _passwordField() {
     return Container(
-      width: 80.0.w,
+    /*  width: 80.0.w,*/
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         controller: _password,
         // ignore: missing_return
@@ -227,9 +230,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget _confirmPasswordField() {
     return Container(
-      width: 80.0.w,
+     /* width: 80.0.w,*/
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         controller: _confirmPassword,
         // ignore: missing_return
@@ -248,9 +251,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget _genderUser() {
     return Container(
-      width: 80.0.w,
+     /* width: 80.0.w,*/
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
       child: Row(
         children: [
           Text("Gender",
@@ -303,9 +306,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget _phoneNumberField() {
     return Container(
-      width: 80.0.w,
+     /* width: 80.0.w,*/
       height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+      margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
       child: TextFormField(
         controller: _phoneNumber,
         // ignore: missing_return
@@ -321,9 +324,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
  Widget _termsNcondition() {
   return Container(
-      width: 80.0.w,
-      height: 7.0.h,
-      margin: EdgeInsets.only(top: 1.5.h,left: 4.0.h,right: 3.0.h),
+     /* width: 80.0.w,
+      height: 7.0.h,*/
+      margin: EdgeInsets.only(top: 1.5.h,left: 3.0.h,right: 3.0.h),
       child: Row(
         children: [
           Checkbox(
@@ -355,9 +358,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
       },
       child: Container(
         alignment: Alignment.center,
-        width: 80.0.w,
+        /*width: 80.0.w,*/
         height: 7.0.h,
-        margin: EdgeInsets.only(left:4.0.h,right: 3.0.h,top: 1.5.h),
+        margin: EdgeInsets.only(left:3.0.h,right: 3.0.h,top: 1.5.h),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
                 1.0.h

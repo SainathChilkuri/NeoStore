@@ -85,7 +85,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
 
   Widget _showDetails(OrderDetails orderDetail) {
     return Container(
-      height: 15.0.h,
       alignment: Alignment.center,
       child: Column(
         children: [

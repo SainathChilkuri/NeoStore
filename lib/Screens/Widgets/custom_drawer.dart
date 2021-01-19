@@ -230,21 +230,17 @@ class _CustomDrawerState extends State<CustomDrawer> {
   }
 
   Widget _accountHeader(UserData user) {
-    return Container(
-      margin: EdgeInsets.only(top: 3.0.h),
-      color: AppColor.drawerBGColor,
-      height: 25.0.h,
-      child: DrawerHeader(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children:[
-              _userpicture(user),
-              _username(user),
-              _gmail(user)
-            ]
+    return  Container(
+            //height: 40.0.h,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children:[
+                  _userpicture(user),
+                  _username(user),
+                  _gmail(user)
+                ]
+            ),
 
-        ),
-      ),
     );
   }
 
@@ -275,7 +271,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   FlatButton(
                       onPressed: (){
                         UserSession().clearData();
-                        Navigator.pushReplacementNamed(context, "/loginScreen");
+                        Navigator.popUntil(context, (route) => false);
+                        Navigator.pushNamed(context,"/loginScreen");
                       },
                       child: Text("Yes",
                         style: TextStyle(
