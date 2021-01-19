@@ -29,6 +29,7 @@ class HomeBloc extends Bloc<HomeEvents,HomeStates>{
   @override
   Stream<HomeStates> mapEventToState(HomeEvents event)async* {
     if (event is FetchUserDetails) {
+      print("Access Token----->${event.accessToken}");
       Response response = await AuthService().fetchUser(event.accessToken);
       if (response.statusCode == 200) {
         var userResponse = json.decode(response.data);

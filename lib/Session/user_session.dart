@@ -8,6 +8,7 @@ class UserSession{
 SharedPreferences sharedPreferences;
 bool isLoggedIn=false;
 Future<dynamic> storeSession(String access_token) async {
+  print("<------------------------");
   isLoggedIn = true;
   sharedPreferences = await SharedPreferences.getInstance();
   print("STORING ACCESS TOKEN :------------");
@@ -17,12 +18,14 @@ Future<dynamic> storeSession(String access_token) async {
 }
 Future<dynamic> getSessionDetails() async {
   print("GET ACCESS TOKEN :------------");
-  sharedPreferences =await SharedPreferences.getInstance();
+  sharedPreferences = await SharedPreferences.getInstance();
   var result = await sharedPreferences.getString(USER);
   print("ACCESS TOKEN: $result");
   return result;
+  print("<------------------------");
 }
 void clearData()async {
+  print("Logout");
   isLoggedIn = false;
   sharedPreferences = await SharedPreferences.getInstance();
   sharedPreferences.clear();

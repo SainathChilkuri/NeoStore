@@ -31,17 +31,15 @@ class _HomeScreenState extends State<HomeScreen> {
     // TODO: implement initState
     super.initState();
     print("HomeScreen");
-
   }
   @override
   Widget build(BuildContext context) {
     String mAccessToken = widget.accessToken;
-    //BlocProvider.of<HomeBloc>(context).add(FetchUserDetails(accessToken: mAccessToken));
+    BlocProvider.of<HomeBloc>(context).add(FetchUserDetails(accessToken: mAccessToken));
     return BlocBuilder<HomeBloc,HomeStates>(
         // ignore: missing_return
         builder: (context,state){
           if(state is HomeInitialState){
-            BlocProvider.of<HomeBloc>(context).add(FetchUserDetails(accessToken: mAccessToken));
             return Scaffold(
               body: Center(child: CircularProgressIndicator(backgroundColor: AppColor.primaryColor,),
             ));

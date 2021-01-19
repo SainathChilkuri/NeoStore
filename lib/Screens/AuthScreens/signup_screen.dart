@@ -38,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   actions: [
                     FlatButton(
                         onPressed: (){
-                          Navigator.pushNamed(context, "/loginScreen");
+                          Navigator.pushReplacementNamed(context, "/loginScreen");
                         },
                         child: Text("Login"))
                   ],
